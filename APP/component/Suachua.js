@@ -14,6 +14,7 @@ const Suachua = () => {
 
         }
     }, []);
+    // Sửa dụng fetch để lấy yêu cầu call api thông qua phương thức post trả về chuỗi json .then((response) => response.json())
     const getList = () => {
         return fetch('https://63772cd181a568fc250e07f2.mockapi.io/api_sua_chua')
             .then((response) => response.json())

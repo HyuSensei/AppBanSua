@@ -19,7 +19,7 @@ const LoginScreen = ({ navigation }) => {
         <View style={styles.container}>
             <StatusBar
             animated={true}
-            backgroundColor="#61dafb"
+            backgroundColor="#ffff"
              />
             <View style={{ left: -106, top: -22, flexDirection: 'row', alignItems: 'center',marginTop:40 }}>
                 <TouchableOpacity
@@ -31,7 +31,7 @@ const LoginScreen = ({ navigation }) => {
             </View>
             <View style={styles.wrapper}>
                 <View   style={{alignItems:'center'}}>
-                    <Image source={require('../img/loginicon.png')} style={{ width: '115%', height: 400 }} />
+                    <Image source={require('../img/logobansua.webp')}   resizeMode="contain"  style={{ width: '100%', height: 200 }} />
                 </View>
                 <View style={styles.input} >
                     <Image source={require('../img/usericon.png')} style={{ width: 20, height: 20, marginRight: 10, marginBottom: 5 }} />
@@ -86,7 +86,8 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#ffffff',   
+        backgroundColor: '#ffffff', 
+        marginTop:-200  
     },
     wrapper: {
         width: '80%',

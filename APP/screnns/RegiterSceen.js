@@ -27,7 +27,7 @@ const RegiterScreen =({navigation})=>{
                 <Text style={{fontSize: 20, color:'#2F99F7', fontWeight:'bold'}}>Đăng Ký</Text>
             </View>
                 <View>
-                    <Image source={require('../img/register.png')} style={{width: 320, height: 230}}/>
+                    <Image source={require('../img/logobansua.webp')} resizeMode="contain" style={{width:300, height: 200}}/>
                 </View>
             <View style={styles.wrapper}>
                 <View style={styles.input}>

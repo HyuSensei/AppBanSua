@@ -70,7 +70,7 @@ export const AuthProvider = ({ children }) => {
          return;
       }
       setIsLoading(true);
-
+      //Gửi yêu cầu lấy API bằng phương thức Post sử dụng thư viện axios của react để call api
       axios
       .post(`${BASE_URL}/register.php`, {
          fullname,
@@ -128,7 +128,7 @@ export const AuthProvider = ({ children }) => {
       }
 
       setIsLoading(true);
-      
+      //Gửi yêu cầu lấy API bằng phương thức Post sử dụng thư viện axios của react để call api
       axios.get(`${BASE_URL}/login.php`, {
          params: {
            username,
