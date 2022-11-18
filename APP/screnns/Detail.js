@@ -4,7 +4,8 @@ import { useNavigation } from '@react-navigation/native';
 import Tabs from '../tab/Tabs';
 const Detail =(props) => {
     const navigation = useNavigation();
-    console.log(props.route.params.item.anh)
+    const item = props.route.params.item;
+    console.log(props.route.params.item.anh);
     return (
         <ScrollView style={styles.container}>
         <View style={{ left: -10, flexDirection: 'row', alignItems: 'center',height:50 }}>
@@ -24,14 +25,35 @@ const Detail =(props) => {
                     style={styles.img}
                 />
                 </View>
-            <Text style={styles.text_gia}>{props.route.params.item.gia} đ</Text>
+            <View >
+                <Text style={styles.text_gia}>{props.route.params.item.gia} đ</Text>
+                <TouchableOpacity
+                    style={{backgroundColor: '#f2703c',
+                        width: 200,
+                        height: 50,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderRadius: 5,
+                       marginLeft:70,
+                       marginBottom:10
+                    }}
+                    onPress={
+                        ()=>{
+                            navigation.navigate('Trend')
+                        }
+                    }
+                ><Text style={{color: '#fff'}}>Thêm vào giỏ hàng</Text>
+                   
+                </TouchableOpacity>
+            </View>
+            
             <Text style={styles.text}>Giao hàng toàn quốc 24h</Text>
             <Text style={styles.text}>Giao hàng với đơn hàng tối thiểu</Text>
             <Text style={styles.text}>250.000 VNĐ</Text>
+            
             <Text style={styles.text_mota}>Chi tiết: {props.route.params.item.mo_ta}</Text>
         </View>
         </ScrollView>
-       
     )
 }
 
@@ -57,9 +79,10 @@ const styles = StyleSheet.create({
         marginVertical: 30
     },
     img:{
-        width: '100%',
+        width: '90%',
         height: 300,
-        borderRadius: 3
+        borderRadius: 3,
+        marginLeft:20
     },
     text:{
         fontSize:18,

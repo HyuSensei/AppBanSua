@@ -41,7 +41,7 @@ const Suachua = () => {
                     <View style={styles.contentContainer}>
                         <Text numberOfLines={1} style={styles.text_tieu_de}>{item.tieu_de}</Text>
                         <Text style={styles.text_gia}>{item.gia} đ</Text>
-                        <Text numberOfLines={2} style={styles.text_noi_dung}>{item.mo_ta}</Text>
+                       
                     </View>
                     <View>
                     </View>
@@ -73,12 +73,15 @@ const Suachua = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 20
+        marginTop: 20,
+        width:'90%',
+       
     },
     bai_bao: {
         borderRadius: 10,
         width: '100%',
-       marginBottom:40
+        marginBottom:40,
+        marginLeft:17
     },
     contentContainer: {
         fontWeight: 'bold',
@@ -94,7 +97,7 @@ const styles = StyleSheet.create({
     img: {
         flex: 0.35,
         width: '100%',
-        height: 200,
+        height: 300,
         borderRadius: 8
     },
     text_gia: {

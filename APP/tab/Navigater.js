@@ -7,7 +7,7 @@ import Intro from '../screnns/Intro';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Tabs from './Tabs';
 import Detail from '../screnns/Detail';
-import Search from '../screnns/Search';
+
 import { AuthContext } from '../context/AuthContext';
 const Stack = createNativeStackNavigator();
 const Navigater = () => {
@@ -22,7 +22,7 @@ const Navigater = () => {
                         <>
                             <Stack.Screen name="Tabs" component={Tabs} options={{ headerShown: false }} />
                             <Stack.Screen name="Detail" component={Detail} options={{ headerShown: false }} />
-                            <Stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
+                            
                         </>
                     ) : (
                         <>
@@ -32,8 +32,6 @@ const Navigater = () => {
                         </>
                     )
                 }
-
-
 
             </Stack.Navigator>
         </NavigationContainer>

@@ -1,4 +1,4 @@
-import { Text, View, ActivityIndicator, FlatList, TouchableOpacity, Image, StyleSheet } from 'react-native'
+import { Text, View, ActivityIndicator, FlatList, TouchableOpacity, Image, StyleSheet,TextInput } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 
@@ -41,7 +41,7 @@ const Suagoiy = () => {
                     <View style={styles.contentContainer}>
                         <Text numberOfLines={1} style={styles.text_tieu_de}>{item.tieu_de}</Text>
                         <Text style={styles.text_gia}>{item.gia} đ</Text>
-                        <Text numberOfLines={2} style={styles.text_noi_dung}>{item.mo_ta}</Text>
+
                     </View>
                     <View>
                     </View>
@@ -51,6 +51,17 @@ const Suagoiy = () => {
     )
     return (
         <View style={styles.container}>
+            <View style={styles.search}>
+                <TextInput style={styles.searchInput}
+                    onChangeText={(text) => {
+                        setsearch(text);
+                    }}
+                    placeholder='Nhập Thông Tin...' />
+                <Image
+                    style={{ height: 30, width: 30, margin: 5 }}
+                    source={require('../img/timkiem.png')}
+                />
+            </View>
             {isLoading ? <ActivityIndicator /> : (
                 <FlatList
                     data={data.filter(eachBao => eachBao.tieu_de.toLocaleLowerCase().includes(search.toLocaleLowerCase()))}
@@ -64,12 +75,15 @@ const Suagoiy = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 20
+        marginTop: 20,
+        width:'90%',
+       
     },
     bai_bao: {
         borderRadius: 10,
         width: '100%',
-       marginBottom:40
+        marginBottom:40,
+        marginLeft:28
     },
     contentContainer: {
         fontWeight: 'bold',
@@ -84,8 +98,8 @@ const styles = StyleSheet.create({
     },
     img: {
         flex: 0.35,
-        width: '100%',
-        height: 200,
+        width: '94%',
+        height: 300,
         borderRadius: 8
     },
     text_gia: {
@@ -94,8 +108,21 @@ const styles = StyleSheet.create({
         color: '#3d6aaf',
         fontWeight: 'bold'
     },
-    text_noi_dung:{
-        textAlign:'justify'
+    search: {
+        width: '100%',
+        height: 38,
+        backgroundColor: '#fff',
+        borderRadius: 8,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        borderWidth: 1,
+        borderRadius: 10,
+        marginBottom: 20,
+        marginLeft:17
+    },
+    searchInput: {
+        paddingLeft: 8,
+        fontSize: 14,
     }
 })
 export default Suagoiy;

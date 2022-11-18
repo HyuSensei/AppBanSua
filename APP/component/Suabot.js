@@ -40,7 +40,7 @@ const Suabot = () => {
                     <View style={styles.contentContainer}>
                         <Text numberOfLines={2} style={styles.text_tieu_de}>{item.tieu_de}</Text>
                         <Text style={styles.text_gia}>{item.gia} đ</Text>
-                        <Text numberOfLines={1} style={styles.text_noi_dung}>{item.mo_ta}</Text>
+                        
                     </View>
                     <View>
                     </View>

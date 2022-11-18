@@ -6,7 +6,6 @@ const SearchBar = () => {
     return (
         <View style={styles.container}>
             <TextInput style={styles.searchInput} placeholder='Nhập Thông Tin...'
-                onPressIn={() => navigation.navigate('Search')}
             />
              <Image
                     style={{height:30,width:30,margin:5}}

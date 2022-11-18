@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "newspapers",
-    "slug": "newspapers",
+    "name": "AppBanSua",
+    "slug": "AppBanSua",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
